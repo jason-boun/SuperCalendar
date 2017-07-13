@@ -1,10 +1,9 @@
-package com.ldf.calendar.view;
+package com.ldf.calendar.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.ldf.calendar.component.State;
-import com.ldf.calendar.model.CalendarDate;
 
 /**
  * Created by ldf on 17/7/5.

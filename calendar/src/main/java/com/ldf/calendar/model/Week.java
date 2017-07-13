@@ -1,9 +1,7 @@
-package com.ldf.calendar.view;
-
-import android.graphics.Canvas;
+package com.ldf.calendar.model;
 
 import com.ldf.calendar.Const;
-import com.ldf.calendar.interf.IDayRenderer;
+import com.ldf.calendar.model.Day;
 
 /**
  * Created by ldf on 17/6/27.

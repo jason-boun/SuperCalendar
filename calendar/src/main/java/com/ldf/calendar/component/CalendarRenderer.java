@@ -2,7 +2,6 @@ package com.ldf.calendar.component;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.util.Log;
 
 import com.ldf.calendar.Const;
 import com.ldf.calendar.Utils;
@@ -10,8 +9,8 @@ import com.ldf.calendar.interf.IDayRenderer;
 import com.ldf.calendar.interf.OnSelectDateListener;
 import com.ldf.calendar.model.CalendarDate;
 import com.ldf.calendar.view.Calendar;
-import com.ldf.calendar.view.Day;
-import com.ldf.calendar.view.Week;
+import com.ldf.calendar.model.Day;
+import com.ldf.calendar.model.Week;
 
 /**
  * Created by ldf on 17/6/26.

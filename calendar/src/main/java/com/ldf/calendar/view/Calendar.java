@@ -4,6 +4,8 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.ldf.calendar.Const;
 import com.ldf.calendar.interf.IDayRenderer;
@@ -14,7 +16,7 @@ import com.ldf.calendar.interf.OnSelectDateListener;
 import com.ldf.calendar.model.CalendarDate;
 import com.ldf.calendar.Utils;
 
-public class Calendar extends View {
+public class Calendar extends LinearLayout {
 	/**
 	 * 日历列数
 	 */

@@ -1,8 +1,12 @@
 package com.ldf.calendar.view;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.util.AttributeSet;
 
+import com.ldf.calendar.Const;
+import com.ldf.calendar.interf.IDayRenderer;
+import com.ldf.calendar.model.Week;
 import com.ldf.calendar.translator.ExpandableLayout;
 
 /**
@@ -12,6 +16,7 @@ import com.ldf.calendar.translator.ExpandableLayout;
 public class WeekView extends ExpandableLayout{
     
     private Week week;
+    private IDayRenderer renderer;
     
     public WeekView(Context context) {
         super(context);
@@ -29,5 +34,20 @@ public class WeekView extends ExpandableLayout{
         this.week = week;
     }
 
+    public IDayRenderer getRenderer() {
+        return renderer;
+    }
 
+    public void setRenderer(IDayRenderer renderer) {
+        this.renderer = renderer;
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        if(week != null && week.days != null) {
+            for (int i = 0 ; i < Const.TOTAL_COL ; i ++)
+                renderer.drawDay(canvas , week.days[i]);
+        }
+    }
 }

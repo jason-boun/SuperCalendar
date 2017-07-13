@@ -2,14 +2,12 @@ package com.ldf.calendar.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.ldf.calendar.component.State;
 import com.ldf.calendar.interf.IDayRenderer;
-import com.ldf.calendar.model.CalendarDate;
+import com.ldf.calendar.model.Day;
 
 /**
  * Created by ldf on 16/10/19.
