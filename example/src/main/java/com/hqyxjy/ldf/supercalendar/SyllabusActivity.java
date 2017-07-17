@@ -36,7 +36,6 @@ public class SyllabusActivity extends AppCompatActivity{
     RecyclerView rvToDoList;
     TextView scrollSwitch;
     TextView themeSwitch;
-    ExpandableLayout expandableLayout;
 
     private ArrayList<Calendar> currentCalendars = new ArrayList<>();
     private CalendarViewAdapter calendarAdapter;
@@ -53,7 +52,6 @@ public class SyllabusActivity extends AppCompatActivity{
         setContentView(R.layout.activity_syllabus);
         context = this;
         content = (CoordinatorLayout) findViewById(R.id.content);
-        expandableLayout = (ExpandableLayout) findViewById(R.id.expandable_layout);
         monthPager = (MonthPager) findViewById(R.id.calendar_view);
         textViewYearDisplay = (TextView) findViewById(R.id.show_year_view);
         textViewMonthDisplay = (TextView) findViewById(R.id.show_month_view);
@@ -202,15 +200,10 @@ public class SyllabusActivity extends AppCompatActivity{
     }
 
     private void refreshSelectBackground(){
-//        ThemeDayView themeDayView = new ThemeDayView(context , R.layout.custom_day_focus);
-//        calendarAdapter.setCustomDayRenderer(themeDayView);
-//        calendarAdapter.notifyDataSetChanged();
-//        calendarAdapter.notifyDataChanged(new CalendarDate());
-        if (expandableLayout.isExpanded()) {
-            expandableLayout.collapse();
-        }  else {
-            expandableLayout.expand();
-        }
+        ThemeDayView themeDayView = new ThemeDayView(context , R.layout.custom_day_focus);
+        calendarAdapter.setCustomDayRenderer(themeDayView);
+        calendarAdapter.notifyDataSetChanged();
+        calendarAdapter.notifyDataChanged(new CalendarDate());
     }
 }
 
