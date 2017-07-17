@@ -128,19 +128,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
-            <com.ldf.calendar.translator.ExpandableLayout
-                android:id="@+id/expandable_layout"
+            <com.ldf.calendar.view.MonthPager
+                android:id="@+id/calendar_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:el_duration="1000"
-                app:el_expanded="true">
-                <com.ldf.calendar.view.MonthPager
-                    android:id="@+id/calendar_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="270dp"
-                    android:background="#fff">
-                </com.ldf.calendar.view.MonthPager>
-            </com.ldf.calendar.translator.ExpandableLayout>
+                android:layout_height="270dp"
+                android:background="#fff">
+            </com.ldf.calendar.view.MonthPager>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/list"
